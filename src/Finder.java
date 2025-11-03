@@ -26,7 +26,7 @@ public class Finder {
         // TODO: Complete the buildTable() function!
         //Array of ArrayLists
         int lineCount = 0;
-        int arrCounter = 0;
+        int arrCounter = 0;//
         String line = br.readLine();
         while(line != null)
         {
