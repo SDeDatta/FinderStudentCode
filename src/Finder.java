@@ -16,7 +16,7 @@ public class Finder {
     private static final String INVALID = "INVALID KEY";
     public static final long P = 2305843009213693951L;
     public static final long RADIX = 256;
-    ArrayList<ArrayList<String>> arr = new ArrayList<>();
+    ArrayList<String[]> arr;
     public Finder()
     {
         arr = new ArrayList<>();
@@ -34,11 +34,11 @@ public class Finder {
             String str1 = words[0];
             String str2 = words[1];
             lineCount++;
-            ArrayList<String> inner = new ArrayList<>();
+            String[] inner = new String[2];
             int index = hash(str1);
-            inner.add(index, str1);
-            inner.add(index, str2);
-            arr.add(inner);
+            inner[0] = str1;
+            inner[1] = str2;
+            arr.add(index, inner);
             arrCounter++;
         }
         // Hash function that can calculate a unique index for an arraylist
@@ -65,7 +65,7 @@ public class Finder {
         {
             if(arr.get(val) != null)
             {
-               value = arr.get(val).get(1);
+               value = arr.get(val)[(1)];
             }
         }
         if(value != null)
