@@ -15,7 +15,6 @@ public class Finder {
 
     private static final String INVALID = "INVALID KEY";
     public static final long P = 2305843009213693951L;
-    public static final long RADIX = 256;
     ArrayList<String[]> arr;
     public Finder()
     {
